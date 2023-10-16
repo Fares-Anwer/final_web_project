@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+header {
+    color: white;
+    background: url(../img/LogoWiz_SVG/LightOfBuy.svg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    height: 20em;
+}
+
+.foot{
+    background-color: #786454;
+}
