@@ -6,7 +6,7 @@ body {
 
 .slider-container {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 
