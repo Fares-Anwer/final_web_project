@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LightOfBuy</title>
-
-    <link rel="shortcut icon" type="image/png" href="img/LightOfBuy.png">
-    <link rel="stylesheet" href="style/style_index.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="sign_in.html">Sign in</a></li>
-                <li><a href="phones.html">Phones</a></li>
-                <li><a href="computers.html">Computers</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact_us.html">contact us</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <footer class="foot"><p>&#169; all copyright &#38; copy, 2023 Fares Anwer</p></footer>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/LightOfBuy.png" />
+    <link rel="stylesheet" href="style/style_index.css" />
+    <link rel="stylesheet" href="style/normlaiz.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="container">
+        <img decoding="async" class="logo" src="images/logo.png" alt="" />
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sign_in.html">Sign in</a></li>
+            <li><a href="iphone.html">apple</a></li>
+            <li><a href="samsung.html">samsung</a></li>
+            <li><a href="xiaomi.html">xiaomi</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    <!-- start section -->
+    <div class="gallery" id="gallery">
+      <h2 class="main-title">Sections</h2>
+      <div class="container">
+        <div class="box">
+          <div class="image">
+            <a href="iphone.html"
+              ><img src="img/iphone/apple_logo.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <a href="samsung.html">
+              <img src="img/samsung/Samsung_Logo.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <a href="xiaomi.html">
+              <img src="img/xiaomi/Xiaomi_logo.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Gallery -->
+    <div class="footer">
+      <div class="container">
+        <img decoding="async" src="img/LogoWiz_SVG/LightOfBuy.svg" alt="Logo" />
+        <p>We Are Social</p>
+        <div class="social-icons">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </div>
+        <p class="copyright">
+          &copy; 2023 <span>Fares Anwer</span> All Right Reserved
+        </p>
+      </div>
+    </div>
+    <!-- End Footer -->
+  </body>
 </html>
