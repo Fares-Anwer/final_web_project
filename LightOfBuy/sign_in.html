@@ -1,32 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in</title>
-    <link rel="stylesheet" href="style/style_login.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style/style_login.css" />
+  </head>
+  <body>
     <div class="box">
-        <span class="borderLine"></span>
-        <form>
-            <h2>Sign in</h2>
-            <div class="inputBox">
-                <input type="text" required="required">
-                <span>Username</span>
-                <li></li>
-            </div>
-            <div class="inputBox">
-                <input type="password" required="required">
-                <span>Password</span>
-                <li></li>
-            </div>
-            <div class="links">
-                <a href="#">Forget Password</a>
-                <a href="#">Signup</a>
-            </div>
-            <input type="submit" value="Login">
-        </form>
-    </div>    
-</body>
+      <span class="borderLine"></span>
+      <form>
+        <h2>Sign in</h2>
+        <div class="inputBox">
+          <input type="text" required="required" />
+          <span>Username</span>
+          <li></li>
+        </div>
+        <div class="inputBox">
+          <input type="password" required="required" />
+          <span>Password</span>
+          <li></li>
+        </div>
+        <div class="links">
+          <a href="#">Forget Password</a>
+          <a href="#">Signup</a>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the input values
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Reset error messages
+        document.getElementById("usernameError").innerHTML = "";
+        document.getElementById("passwordError").innerHTML = "";
+
+        // Check if the username is empty
+        if (username.trim() === "") {
+          document.getElementById("usernameError").innerHTML =
+            "Please enter your username";
+          return;
+        }
+
+        // Check if the password is empty
+        if (password.trim() === "") {
+          document.getElementById("passwordError").innerHTML =
+            "Please enter your password";
+          return;
+        }
+
+        // If all inputs are valid, you can proceed with form submission or further processing
+        // For now, let's just log the inputs to the console
+        console.log("Username: " + username);
+        console.log("Password: " + password);
+
+        // TODO: Add your logic here for further processing, such as making an AJAX request to validate the credentials
+
+        // Reset the form
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+      }
+    </script>
+  </body>
 </html>
+
+<!-- <body>
+    <form onsubmit="return validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <table id="dataTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get input values
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var email = document.getElementById('email').value;
+
+            // Validate inputs
+            if (name.trim() === "" || age.trim() === "" || email.trim() === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            // Create table row
+            var table = document.getElementById('dataTable');
+            var tbody = table.querySelector('tbody');
+            var newRow = tbody.insertRow();
+
+            // Insert cell values
+            var nameCell = newRow.insertCell();
+            nameCell.textContent = name;
+
+            var ageCell = newRow.insertCell();
+            ageCell.textContent = age;
+
+            var emailCell = newRow.insertCell();
+            emailCell.textContent = email;
+
+            // Display the table
+            table.style.display = "table";
+
+            // Reset form
+            document.getElementById('name').value = "";
+            document.getElementById('age').value = "";
+            document.getElementById('email').value = "";
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body> -->

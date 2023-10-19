@@ -26,20 +26,33 @@ body {
   position: relative;
   width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   padding: 20px;
+}
+
+@media (min-width: 681px) {
+  #iphone1 {
+    grid-column: 1/3;
+  }
+}
+
+@media (max-width: 680px) {
+  #iphone {
+    grid-column: 1/1;
+  }
 }
 
 .container .card {
   width: 100%;
   background: #fff;
+  align-content: flex-start;
 }
 
 .container .card .imgbox {
   position: relative;
   width: 100%;
-  height: 310px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -128,8 +141,13 @@ body {
   transform: translateY(-50%) rotate(45deg);
 }
 
+.container .card a {
+  text-decoration: none;
+}
+
 .container .card .content {
   padding: 10px;
+  background-color: #eee;
 }
 
 .container .card .content .phonename {
