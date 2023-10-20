@@ -6,10 +6,10 @@
   font-family: "poppins", sans-serif;
 }
 
-body {
+.body {
   background-image: url("../img/iphone/iphone-15_plus.jpg");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -22,9 +22,97 @@ body {
   height: 400px;
 } */
 
+header {
+  background-color: #eee;
+  background: url(../img/LogoWiz_SVG/LightOfBuy.svg) no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  height: 25em;
+}
+
+/* Start Header */
+.header {
+  background-color: #eee;
+  padding: 20px;
+}
+.header .h_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .h_links {
+  position: relative;
+}
+.header .links:hover .h_icon span:nth-child(2) {
+  width: 100%;
+}
+.header .h_links .h_icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header .h_links .h_icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .h_links .h_icon span:first-child {
+  width: 100%;
+}
+.header .h_links .h_icon span:nth-child(2) {
+  width: 60%;
+  transition: var(--main-duration);
+}
+.header .h_links .h_icon span:last-child {
+  width: 100%;
+}
+.header .h_links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .h_links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .h_links:hover ul {
+  display: block;
+}
+.header .h_links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: var(--main-duration);
+}
+.header .h_links ul li a:hover {
+  padding-left: 25px;
+}
+.header .h_links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+/* End Header */
+
 .container {
   position: relative;
   width: 1200px;
+  /* height: 2008.85; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
@@ -177,3 +265,48 @@ body {
 .container .card .content .price_rating .fa.grey {
   color: #ccc;
 }
+
+/* Start Footer */
+.footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background: url(../img/LogoWiz_SVG/LightOfBuy.svg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.footer .f_container {
+  position: relative;
+}
+.footer img {
+  margin-bottom: 20px;
+}
+.footer p:not(.copyright) {
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+  font-size: 22px;
+  width: fit-content;
+  margin: 20px auto;
+}
+.footer .social-icons i {
+  padding: 10px 15px;
+}
+.footer .copyright {
+  margin-top: 60px;
+}
+.footer .copyright span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
