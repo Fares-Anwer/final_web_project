@@ -12,23 +12,23 @@
       <form>
         <h2>Sign in</h2>
         <div class="inputBox">
-          <input type="text" required="required" />
+          <input type="text" name="username" required="required" />
           <span>Username</span>
           <li></li>
         </div>
         <div class="inputBox">
-          <input type="password" required="required" />
+          <input type="password" name="password" required="required" />
           <span>Password</span>
           <li></li>
         </div>
         <div class="links">
-          <a href="#">Forget Password</a>
-          <a href="#">Signup</a>
+          <a class="alink" href="#">Forget Password</a>
+          <a class="alink" href="#">Signup</a>
         </div>
         <input type="submit" value="Login" />
       </form>
     </div>
-
+    <script src="sign_script.js"></script>
     <script>
       function validateForm(event) {
         event.preventDefault(); // Prevent form submission
